@@ -24,7 +24,6 @@ async def trump():
     if request.method == 'POST':
         data = json.loads(request.data)
         mystory["input"] = data["input"]
-        print("input: " + data["input"])
         mystory["story"] = TrumpController.tweet(mystory["input"]) #"this other story"
     elif request.method == 'GET':
         mystory["story"] = TrumpController.tweet() #"this cool story"
